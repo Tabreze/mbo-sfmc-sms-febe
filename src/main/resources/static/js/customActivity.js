@@ -151,7 +151,7 @@ define([
    		{"items": [{
       	"SMS_IDs":$('#SMSidValue'),
       	"Template_IDs" : $('#TemplateIDValue'),
-      	"LoanIDs": $('#"{{Contact.Attribute.SMS.loanId}}"')
+      	"LoanIDs": $("{{Contact.Attribute.SMS.loanId}}")
 				 }]
 		
 		})
