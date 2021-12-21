@@ -41,7 +41,7 @@
 	"configurationArguments": {
       "applicationExtensionKey": "8e305c98-0dba-488f-b37c-8a34add50501",
        "save": {
-           "url": "https://mbo-sfmc-sms-febe.herokuapp.com/save",
+           "url": "https://bo-sfmc-sms-febe.herokuapp.com/save",
             "verb": "POST",
             "body": "",
             "format": "json",
