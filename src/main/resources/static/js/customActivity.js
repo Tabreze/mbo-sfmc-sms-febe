@@ -105,7 +105,7 @@ define([
 		console.log("***Calling save function: ");
         var SMSidValue = $('#SMSid').val();
         var TemplateIDValue = $('#TemplateID').val();
-        
+        payload['metaData'].isConfigured = true;
         payload['arguments'].execute.inArguments = [{
             "SMSid_Value": SMSidValue,
             "TemplateID_Value": TemplateIDValue,
@@ -123,7 +123,7 @@ define([
         }];
 		//console.log("Contact number from DE: "+JSON.stringify("{{Contact.Attribute.SMS.Contact}}"));
 				
-        payload['metaData'].isConfigured = true;
+        //payload['metaData'].isConfigured = true;
 
         console.log("***Payload on SAVE function: " +JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
