@@ -158,9 +158,11 @@ define([
 		})
 	.then(response => response.json()).catch(err => console.log(err)) 
     .then(json => console.log(json)).catch(err => console.log(err)); 
+	console.log("Template ID: " +JSON.stringify(SMSidValue));
+	console.log("Template ID: " +JSON.stringify(loanId));
 }
-//console.log("Template ID: " +JSON.stringify(SMS_IDs));
-//console.log("Template ID: " +JSON.stringify(Template_IDs));
-//console.log("Template ID: " +JSON.stringify(LoanIDs));
+//console.log("Template ID: " +JSON.stringify(SMSidValue));
+//console.log("Template ID: " +JSON.stringify(TemplateIDValue));
+//console.log("Template ID: " +JSON.stringify(loanId));
 
 });
