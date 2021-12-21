@@ -146,7 +146,8 @@ define([
 	
 	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:AFE77857-1B91-49A9-96B6-C201929888D5/rows', {
 	method: "POST",
-	headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#tokens')}, 
+	//headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#tokens')}, 
+		headers: {"Content-type": "application/json; charset=UTF-8"},
 		body: JSON.stringify(
    		{"items": [{
       	"SMS_IDs":$('#SMSidValue'),
@@ -158,8 +159,8 @@ define([
 		})
 	.then(response => response.json()).catch(err => console.log(err)) 
     .then(json => console.log(json)).catch(err => console.log(err)); 
-	console.log("Template ID: " +JSON.stringify(SMS_IDs));
-	console.log("Template ID: " +JSON.stringify(Template_IDs));
+	console.log("Template ID: " +JSON.stringify(SMSidValue));
+	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
 	//console.log("Template ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
 }
 //console.log("Template ID: " +JSON.stringify(SMSidValue));
