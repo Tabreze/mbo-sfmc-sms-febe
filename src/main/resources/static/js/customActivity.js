@@ -128,7 +128,7 @@ define([
 
         console.log("***Payload on SAVE function: " +JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
-        return 'Success';
+        //return 'Success';
         } catch(err) {
             documnet.getElement("error").style.display = "block";
             documnet.getElement("error").innerHtml = err;
