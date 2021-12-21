@@ -94,8 +94,8 @@ define([
 
     function onGetEndpoints (endpoints) {
         // Response: endpoints = { restHost: <url> } i.e. "rest.s1.qa1.exacttarget.com"
-        //console.log("Get End Points function: "+JSON.stringify(endpoints));
-        console.log(endpoints);
+        console.log("Get End Points function: "+JSON.stringify(endpoints));
+        //console.log(endpoints);
     }
 
     function save() {
@@ -131,13 +131,30 @@ define([
             documnet.getElement("error").style.display = "block";
             documnet.getElement("error").innerHtml = err;
         }
-		fetch('https://demo-default.uw2.customer-messaging-gateway-nprd.lendingcloud.us/api/customer-messaging-gateway/v1/message', {
-  		method: "POST",
-  		body: JSON.stringify(payload['arguments'].execute.inArguments),
-  		headers: {"Content-type": "application/json; charset=UTF-8"}
-		})
-		.then(response => response.json()).catch(err => console.log(err)) 
-        .then(json => console.log(json)).catch(err => console.log(err)); 
-    }                    
 
+
+	//	fetch('https://demo-default.uw2.customer-messaging-gateway-nprd.lendingcloud.us/api/customer-messaging-gateway/v1/message', {
+  	//	method: "POST",
+  //		body: JSON.stringify(payload['arguments'].execute.inArguments),
+  //		headers: {"Content-type": "application/json; charset=UTF-8"}
+//		})
+	//	.then(response => response.json()).catch(err => console.log(err)) 
+   //     .then(json => console.log(json)).catch(err => console.log(err)); 
+
+	
+	fetch('https://https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:AFE77857-1B91-49A9-96B6-C201929888D5/rows', {
+	method: "POST",
+	headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
+		body: JSON.stringify(
+   		{"items": [{
+      	"SMS_ID":$('#SMSidValue'),
+      	"Template_ID" : $('#TemplateIDValue'),
+      	"Loan_ID": $('#loanId')
+				 }]
+		
+		})
+		})
+	.then(response => response.json()).catch(err => console.log(err)) 
+    .then(json => console.log(json)).catch(err => console.log(err)); 
+}
 });
