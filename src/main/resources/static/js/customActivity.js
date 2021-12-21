@@ -150,8 +150,8 @@ define([
 		body: JSON.stringify(
    		{"items": [{
       	"SMS_IDs":$('#SMSidValue'),
-      	"Template_IDs" : $('#TemplateIDValue'),
-      	"LoanIDs": $("{{Contact.Attribute.SMS.loanId}}")
+      	"Template_IDs" : $('#TemplateIDValue')
+      	//"LoanIDs": $("{{Contact.Attribute.SMS.loanId}}")
 				 }]
 		
 		})
@@ -160,7 +160,7 @@ define([
     .then(json => console.log(json)).catch(err => console.log(err)); 
 	console.log("Template ID: " +JSON.stringify(SMS_IDs));
 	console.log("Template ID: " +JSON.stringify(Template_IDs));
-	console.log("Template ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
+	//console.log("Template ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
 }
 //console.log("Template ID: " +JSON.stringify(SMSidValue));
 //console.log("Template ID: " +JSON.stringify(TemplateIDValue));
