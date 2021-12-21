@@ -106,7 +106,7 @@ define([
         var SMSidValue = $('#SMSid').val();
         var TemplateIDValue = $('#TemplateID').val();
         //payload['metaData'].isConfigured = true;
-		payload.name = name;
+		//payload.name = name;
         payload['arguments'].execute.inArguments = [{
             "SMSid_Value": SMSidValue,
             "TemplateID_Value": TemplateIDValue,
@@ -144,7 +144,7 @@ define([
    //     .then(json => console.log(json)).catch(err => console.log(err)); 
 
 	
-	fetch('https://https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:AFE77857-1B91-49A9-96B6-C201929888D5/rows', {
+	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:AFE77857-1B91-49A9-96B6-C201929888D5/rows', {
 	method: "POST",
 	headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
 		body: JSON.stringify(
