@@ -13,7 +13,7 @@ define([
     {"key": "step1", "label": "MBO Gayeway Template and SMS ID Selection	"}
     ];
     var currentStep = steps[0].key;
-	//var authTokens = {};
+	var authTokens = {};
     $(window).ready(onRender);
     
     try {
@@ -84,9 +84,9 @@ define([
 
     function onGetTokens (tokens) {
         // Response: tokens = { token: <legacy token>, fuel2token: <fuel api token> }
-        //console.log("Tokens function: "+JSON.stringify(tokens));
+        console.log("Tokens function: "+JSON.stringify(tokens));
         //authTokens = tokens;
-        console.log(tokens);
+        //console.log(tokens);
         authTokens = tokens;
 
     }
@@ -99,6 +99,7 @@ define([
     }
 
     function save() {
+	debugger
         try {
 		//alert($('#SMSid').val());
 		console.log("***Calling save function: ");
@@ -147,9 +148,9 @@ define([
 	headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
 		body: JSON.stringify(
    		{"items": [{
-      	"SMS_ID":$('#SMSidValue'),
-      	"Template_ID" : $('#TemplateIDValue'),
-      	"Loan_ID": $('#loanId')
+      	"SMSIDs":$('#SMSidValue'),
+      	"TemplateIDs" : $('#TemplateIDValue'),
+      	"LoanIDs": $('#loanId')
 				 }]
 		
 		})
@@ -157,4 +158,8 @@ define([
 	.then(response => response.json()).catch(err => console.log(err)) 
     .then(json => console.log(json)).catch(err => console.log(err)); 
 }
+console.log("Template ID: " +JSON.stringify(TemplateIDs));
+console.log("Template ID: " +JSON.stringify(SMSIDs));
+console.log("Template ID: " +JSON.stringify(LoanIDs));
+
 });
