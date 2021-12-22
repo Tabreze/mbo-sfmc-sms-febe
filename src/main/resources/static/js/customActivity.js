@@ -28,7 +28,7 @@ define([
     }
 
     function onRender() {
-	debugger
+	//debugger
         try {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
@@ -41,7 +41,7 @@ define([
     }
 
   function initialize(data) {
-	debugger
+	//debugger
         //console.log("***Initialize  " + data);
         if (data) {
             payload = data;
