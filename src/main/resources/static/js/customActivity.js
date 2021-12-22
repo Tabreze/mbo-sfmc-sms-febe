@@ -85,7 +85,7 @@ define([
     }
 
     function onGetTokens (tokens) {
-	debugger
+	//debugger
         // Response: tokens = { token: <legacy token>, fuel2token: <fuel api token> }
         console.log("Tokens function: "+JSON.stringify(tokens));
         //authTokens = tokens;
@@ -96,7 +96,7 @@ define([
     
 
     function onGetEndpoints (endpoints) {
-	debugger
+	//debugger
         // Response: endpoints = { restHost: <url> } i.e. "rest.s1.qa1.exacttarget.com"
         console.log("Get End Points function: "+JSON.stringify(endpoints));
         //console.log(endpoints);
@@ -150,7 +150,7 @@ define([
 	
 	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:AFE77857-1B91-49A9-96B6-C201929888D5/rows', {
 	method: 'POST',
-	headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#tokens')}, 
+	headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
 	
 		//headers: {'Content-type': 'application/json; charset=UTF-8'},
 	//headers: {'Content-Type': 'application/json'},
