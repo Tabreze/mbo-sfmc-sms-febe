@@ -147,7 +147,13 @@ define([
 	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:AFE77857-1B91-49A9-96B6-C201929888D5/rows', {
 	method: 'POST',
 	//headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#tokens')}, 
-		headers: {'Content-type': 'application/json',},
+	
+		//headers: {'Content-type': 'application/json; charset=UTF-8'},
+	headers: {'Content-Type': 'application/json'},
+    headers:{'Accept': 'application/json'},
+    //headers: {'Authorization', 'Basic ' + base64.encode(username + ":" +  password)},
+    //headers: {'Origin':'http://localhost:3000'}
+		
 		body: JSON.stringify(
    		{"items": [{
       	"SMS_IDs":$('#SMSidValue'),
