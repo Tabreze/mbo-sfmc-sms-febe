@@ -150,7 +150,7 @@ define([
 	
 	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:AFE77857-1B91-49A9-96B6-C201929888D5/rows', {
 	method: 'POST',
-	headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
+	headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + authTokens}, 
 	
 		//headers: {'Content-type': 'application/json; charset=UTF-8'},
 	//headers: {'Content-Type': 'application/json'},
