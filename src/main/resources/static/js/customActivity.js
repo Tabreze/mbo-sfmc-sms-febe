@@ -153,9 +153,11 @@ define([
 	//mode: "opaque",	  
 	method: "POST",
       //headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
-	 headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
+	 //headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
+      headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  Access-Control-Allow-Credentials: true; 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
       
-		
+       "Access-Control-Allow-Credentials": true,
+		mode: 'opaque',
 		body: JSON.stringify(
    		{"items": [{
       	  "SMS_IDs":$('#SMSidValue'),
