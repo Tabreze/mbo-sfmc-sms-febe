@@ -148,28 +148,21 @@ define([
    //     .then(json => console.log(json)).catch(err => console.log(err)); 
 
 	
-	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/data/v1/async/dataextensions/key:AFE77857-1B91-49A9-96B6-C201929888D5/rows', {
-	method: 'POST',
-	headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + authTokens}, 
-	
-		//headers: {'Content-type': 'application/json; charset=UTF-8'},
-	//headers: {'Content-Type': 'application/json'},
-    headers:{'Accept': 'application/json'},
-    //headers: {'Authorization', 'Basic ' + base64.encode(username + ":" +  password)},
-    //headers: {'Origin':'http://localhost:3000'}
-		
+	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', {
+	  method: "POST",
+      headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
 		body: JSON.stringify(
    		{"items": [{
-      	"SMS_IDs":$('#SMSidValue'),
-      	"Template_IDs" : $('#TemplateIDValue')
-      	//"LoanIDs": $("{{Contact.Attribute.SMS.loanId}}")
+      	  "SMS_ID":$('#SMSidValue'),
+          "Template_ID" : $('#TemplateIDValue'),
+          "Loan_ID": $('#loanId')
 				 }]
 		
 		})
 		})
 	.then(response => response.json()).catch(err => console.log(err)) 
     .then(json => console.log(json)).catch(err => console.log(err)); 
-	console.log("Template ID: " +JSON.stringify(SMSidValue));
+	console.log("SMS ID: " +JSON.stringify(SMSidValue));
 	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
 	//console.log("Template ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
 }
