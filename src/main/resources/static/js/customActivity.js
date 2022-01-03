@@ -139,13 +139,6 @@ define([
         }
 
 
-	//	fetch('https://demo-default.uw2.customer-messaging-gateway-nprd.lendingcloud.us/api/customer-messaging-gateway/v1/message', {
-  	//	method: "POST",
-  //		body: JSON.stringify(payload['arguments'].execute.inArguments),
-  //		headers: {"Content-type": "application/json; charset=UTF-8"}
-//		})
-	//	.then(response => response.json()).catch(err => console.log(err)) 
-   //     .then(json => console.log(json)).catch(err => console.log(err)); 
 
 	
 	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
@@ -157,7 +150,7 @@ define([
       headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  Access-Control-Allow-Credentials: true; 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
       
        "Access-Control-Allow-Credentials": true,
-		mode: 'opaque',
+		//mode: 'opaque',
 		body: JSON.stringify(
    		{"items": [{
       	  "SMS_IDs":$('#SMSidValue'),
@@ -174,13 +167,18 @@ define([
      console.log("this is success")
       }
      }).catch(err => console.log(err));
-
+	debugger
 	console.log("SMS ID: " +JSON.stringify(SMSidValue));
 	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
 	console.log("Loan ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
 }
-//console.log("Template ID: " +JSON.stringify(SMSidValue));
-//console.log("Template ID: " +JSON.stringify(TemplateIDValue));
-//console.log("Template ID: " +JSON.stringify(loanId));
+
+	//	fetch('https://demo-default.uw2.customer-messaging-gateway-nprd.lendingcloud.us/api/customer-messaging-gateway/v1/message', {
+  	//	method: "POST",
+  //		body: JSON.stringify(payload['arguments'].execute.inArguments),
+  //		headers: {"Content-type": "application/json; charset=UTF-8"}
+//		})
+	//	.then(response => response.json()).catch(err => console.log(err)) 
+   //     .then(json => console.log(json)).catch(err => console.log(err)); 
 
 });
