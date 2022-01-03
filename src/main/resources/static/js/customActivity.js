@@ -150,8 +150,9 @@ define([
 	
 	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
 	{
-	  method: "POST",
-      headers: {"Content-type": "application/json; charset=UTF-8"}, 
+	mode: "cors",	  
+	method: "POST",
+      headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
 		body: JSON.stringify(
    		{"items": [{
       	  "SMS_IDs":$('#SMSidValue'),
@@ -161,8 +162,14 @@ define([
 		
 		})
 		})
-	.then(response => response.json()).catch(err => console.log(err)) 
-    .then(json => console.log(json)).catch(err => console.log(err)); 
+	.then(response => response.json()) 
+    .then(json => {
+     if(json.statusCode >= 300) { console.log("this is error")
+     } else {
+     console.log("this is success")
+      }
+     }).catch(err => console.log(err));
+
 	console.log("SMS ID: " +JSON.stringify(SMSidValue));
 	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
 	console.log("Loan ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
