@@ -153,9 +153,9 @@ define([
       headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
 		body: JSON.stringify(
    		{"items": [{
-      	  "SMS_ID":$('#SMSidValue'),
-          "Template_ID" : $('#TemplateIDValue'),
-          "Loan_ID": $('#loanId')
+      	  "SMS_IDs":$('#SMSidValue'),
+          "Template_IDs" : $('#TemplateIDValue'),
+          "LoanIDs": $('#loanId')
 				 }]
 		
 		})
