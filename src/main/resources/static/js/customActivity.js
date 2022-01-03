@@ -153,7 +153,13 @@ define([
 	mode: "cors",	  
 	method: "POST",
       //headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
-	  headers: {"Content-type": "application/json; Access-Control-Allow-Origin:'*'; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')},
+	 headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Credentials": "true",
+      "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+      "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+         },
+		
 		body: JSON.stringify(
    		{"items": [{
       	  "SMS_IDs":$('#SMSidValue'),
