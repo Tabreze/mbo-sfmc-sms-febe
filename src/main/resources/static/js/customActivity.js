@@ -152,7 +152,8 @@ define([
 	{
 	mode: "cors",	  
 	method: "POST",
-      headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
+      //headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
+	  headers: {"Content-type": "application/json; Access-Control-Allow-Headers : '*'; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')},
 		body: JSON.stringify(
    		{"items": [{
       	  "SMS_IDs":$('#SMSidValue'),
