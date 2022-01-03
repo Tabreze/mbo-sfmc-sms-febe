@@ -122,7 +122,7 @@ define([
 			"businessUnit": "{{Contact.Attribute.SMS.businessUnit}}",
 			"scheduleDate": "{{Contact.Attribute.SMS.scheduleDate}}",
 			"vendor": "{{Contact.Attribute.SMS.vendor}}",
-            "to": "{{Contact.Attribute.SMS.Contact}}" //<----This should map to your data extension name and phone number column
+            "Contact": "{{Contact.Attribute.SMS.Contact}}" //<----This should map to your data extension name and phone number column
 			
 		
         }];
@@ -148,7 +148,8 @@ define([
    //     .then(json => console.log(json)).catch(err => console.log(err)); 
 
 	
-	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', {
+	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
+	{
 	  method: "POST",
       headers: {"Content-type": "application/json; charset=UTF-8"}, 
 		body: JSON.stringify(
@@ -164,7 +165,7 @@ define([
     .then(json => console.log(json)).catch(err => console.log(err)); 
 	console.log("SMS ID: " +JSON.stringify(SMSidValue));
 	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
-	//console.log("Template ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
+	console.log("Loan ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
 }
 //console.log("Template ID: " +JSON.stringify(SMSidValue));
 //console.log("Template ID: " +JSON.stringify(TemplateIDValue));

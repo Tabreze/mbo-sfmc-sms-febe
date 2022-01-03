@@ -25,7 +25,7 @@
 					"businessUnit": "{{Contact.Attribute.SMS.businessUnit}}",
 					"scheduleDate": "{{Contact.Attribute.SMS.scheduleDate}}",
 					"vendor": "{{Contact.Attribute.SMS.vendor}}",
-					"to": "{{Contact.Attribute.SMS.Contact}}" 
+					"Contact": "{{Contact.Attribute.SMS.Contact}}" 
 				 }               
             ],
             "outArguments": [],
