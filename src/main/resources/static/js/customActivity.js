@@ -143,14 +143,12 @@ define([
 	
 	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
 	{
-	mode: "opaque",	  
-	method: "POST",
+	//mode: "opaque",	  
+	 method: "POST",
       //headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
 	 //headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
-      headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  Access-Control-Allow-Credentials: true; 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer" + $('#authTokens')}, 
-      
-       "Access-Control-Allow-Credentials": true,
-		
+      headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  Access-Control-Allow-Credentials: true; 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
+		mode: 'no-cors',
 		body: JSON.stringify(
    		{
         "keys": {
@@ -168,12 +166,14 @@ define([
      } else {
      console.log("this is success")
       }
+    
      }).catch(err => console.log(err));
-	debugger
+    
 	console.log("SMS ID: " +JSON.stringify(SMSidValue));
 	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
 	console.log("Loan ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
 }
+
 
 	//	fetch('https://demo-default.uw2.customer-messaging-gateway-nprd.lendingcloud.us/api/customer-messaging-gateway/v1/message', {
   	//	method: "POST",
