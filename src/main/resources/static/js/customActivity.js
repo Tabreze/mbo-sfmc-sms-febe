@@ -150,15 +150,11 @@ define([
 	
 	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
 	{
-	mode: "cors",	  
+	mode: "opaque",	  
 	method: "POST",
       //headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
-	 headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Credentials": "true",
-      "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
-      "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-         },
+	 headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
+      
 		
 		body: JSON.stringify(
    		{"items": [{
