@@ -145,21 +145,20 @@ define([
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-      //headers: {"Content-type": "application/json; charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
-	 //headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
-      headers: {"Content-type": "application/json; 'Access-Control-Allow-Origin':'*';  Access-Control-Allow-Credentials: true; 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS';charset=UTF-8","Authorization": "Bearer " + $('#authTokens')}, 
+      headers: {"Content-type": "application/json, charset=UTF-8", 'Access-Control-Allow-Origin':'*',  "Access-Control-Allow-Credentials": "true", 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}, 
 		mode: 'no-cors',
-		body: JSON.stringify(
+		
+       body: JSON.stringify(
    		{
         "keys": {
             "LoanIDs": "{{Contact.Attribute.SMS.loanId}}"
         },
         "values": {
-            "Template_IDs": $('#TemplateIDValue'),
-            "SMS_IDs": $('#SMSidValue')
+            "Template_IDs": TemplateIDValue,
+            "SMS_IDs": SMSidValue
         }
     })
-		})
+		}) 
 	.then(response => response.json()) 
     .then(json => {
      if(json.statusCode >= 300) { console.log("this is error")
@@ -171,8 +170,7 @@ define([
     
 	console.log("SMS ID: " +JSON.stringify(SMSidValue));
 	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
-	console.log("Loan ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
-}
+	console.log("Loan ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));}
 
 
 	//	fetch('https://demo-default.uw2.customer-messaging-gateway-nprd.lendingcloud.us/api/customer-messaging-gateway/v1/message', {
