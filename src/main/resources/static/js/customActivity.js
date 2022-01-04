@@ -139,25 +139,21 @@ define([
         }
 
 
-
-	
-	fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/authTokens', 
+fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token', 
 	{
 	//mode: "opaque",	  
-	 method: "GET",
+	 method: "POST",
      headers: {"Content-type": "application/json, charset=UTF-8"},   
 		mode: 'no-cors',
 		
-       /*body: JSON.stringify(
+       body: JSON.stringify(
    		{
-        "keys": {
-            "LoanIDs": "{{Contact.Attribute.SMS.loanId}}"
-        },
-        "values": {
-            "Template_IDs": TemplateIDValue,
-            "SMS_IDs": SMSidValue
-        }
-    })*/
+    "grant_type": "client_credentials",
+    "client_id": "ca1xp4ph65dl9nxfgcbnjelk",
+    "client_secret": "5B4zhj2pTWzvjAEqImLPrttU",
+    "account_id": "517005233"
+}
+    
 		}) 
 	.then(response => response.json()) 
     .then(json => {
@@ -168,11 +164,40 @@ define([
     
      }).catch(err => console.log(err));
     
+
+	
+/*	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
+	{
+	//mode: "opaque",	  
+	 method: "POST",
+      headers: {"Content-type": "application/json, charset=UTF-8", 'Access-Control-Allow-Origin':'*',  "Access-Control-Allow-Credentials": "true", 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}, 
+		mode: 'no-cors',
+		
+       body: JSON.stringify(
+   		{
+        "keys": {
+            "LoanIDs": "{{Contact.Attribute.SMS.loanId}}"
+        },
+        "values": {
+            "Template_IDs": TemplateIDValue,
+            "SMS_IDs": SMSidValue
+        }
+    })
+		}) 
+	.then(response => response.json()) 
+    .then(json => {
+     if(json.statusCode >= 300) { console.log("this is error")
+     } else {
+     console.log("this is success")
+      }
+    
+     }).catch(err => console.log(err));
+    */
 	console.log("SMS ID: " +JSON.stringify(SMSidValue));
 	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
-	console.log("Loan ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));}
+	console.log("Loan ID: " +JSON.stringify("{{Contact.Attribute.SMS.loanId}}"));
 
-
+};
 	//	fetch('https://demo-default.uw2.customer-messaging-gateway-nprd.lendingcloud.us/api/customer-messaging-gateway/v1/message', {
   	//	method: "POST",
   //		body: JSON.stringify(payload['arguments'].execute.inArguments),
