@@ -141,7 +141,7 @@ define([
 
 
 	
-	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
+	fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
 	{
 	//mode: "opaque",	  
 	 method: "POST",
