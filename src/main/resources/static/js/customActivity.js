@@ -72,21 +72,27 @@ define([
                })
         });
 
-if( SMSid_Value != "" && TemplateID_Value != "" ){
+if( SMSid_Value != "" || TemplateID_Value != "" ){
         connection.trigger('updateButton', {
             button: 'next',
             text: 'done',
-        	visible: false
+        	visible: true
         });
     } else{
          connection.trigger('updateButton', {
-            button: 'next',
+           button: 'next',
             text: 'done',
-            visible: true
-    }
+            visible: false
 
-        
-     
+    });
+
+    }
+}   catch(err) {
+         throw(err);
+       // console.log(err);
+    }
+}
+   
 
     function onGetTokens (tokens) {
 	//debugger
