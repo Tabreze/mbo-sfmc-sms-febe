@@ -141,7 +141,7 @@ define([
 
 
 	
-	fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/userinfo', 
+	fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/authTokens', 
 	{
 	//mode: "opaque",	  
 	 method: "GET",
