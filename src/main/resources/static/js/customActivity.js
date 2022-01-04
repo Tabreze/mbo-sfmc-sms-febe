@@ -72,15 +72,15 @@ define([
                })
         });
 
-if( SMSid_Value === "" && TemplateID_Value === "" ){
-        
+if( SMSid_Value != "" && TemplateID_Value != "" ){
         connection.trigger('updateButton', {
             button: 'next',
             text: 'done',
-            visible: false
+        	visible: false
         });
     } else{
-         button: 'next',
+         connection.trigger('updateButton', {
+            button: 'next',
             text: 'done',
             visible: true
     }
@@ -174,7 +174,7 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/reque
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${'accessToken'}`, 'Access-Control-Allow-Origin':'*',  "Access-Control-Allow-Credentials": "true", 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
+    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${requestToken}`, 'Access-Control-Allow-Origin':'*',  "Access-Control-Allow-Credentials": "true", 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
 		mode: 'no-cors',
 		
        body: JSON.stringify(
