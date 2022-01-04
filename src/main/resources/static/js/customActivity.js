@@ -145,7 +145,7 @@ define([
 	{
 	//mode: "opaque",	  
 	 method: "GET",
-     headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${authTokens}`},   
+     headers: {"Content-type": "application/json, charset=UTF-8"},   
 		mode: 'no-cors',
 		
        /*body: JSON.stringify(
