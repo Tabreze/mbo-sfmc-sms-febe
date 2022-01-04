@@ -72,17 +72,21 @@ define([
                })
         });
 
+if( SMSid_Value === "" && TemplateID_Value === "" ){
+        
         connection.trigger('updateButton', {
             button: 'next',
             text: 'done',
-            visible: true
+            visible: false
         });
-    } catch(err) {
-         throw(err);
-       // console.log(err);
+    } else{
+         button: 'next',
+            text: 'done',
+            visible: true
     }
 
-    }
+        
+     
 
     function onGetTokens (tokens) {
 	//debugger
@@ -139,7 +143,7 @@ define([
         }
 
 
-fetch('https://mc-260crls51zy9yd64d27td22t8.auth.exacttargetapis.com/v1/requestToken', 
+fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/requestToken', 
 	{
 	//mode: "opaque",	  
 	 method: "POST",
