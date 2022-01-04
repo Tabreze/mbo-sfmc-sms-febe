@@ -145,7 +145,7 @@ define([
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-     headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${token}`, 'Access-Control-Allow-Origin':'*',  "Access-Control-Allow-Credentials": "true", 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
+     headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${authTokens}`, 'Access-Control-Allow-Origin':'*',  "Access-Control-Allow-Credentials": "true", 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
 		mode: 'no-cors',
 		
        body: JSON.stringify(
