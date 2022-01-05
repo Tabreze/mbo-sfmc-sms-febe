@@ -141,12 +141,12 @@ define([
         }
 
 
-	fetch('https://cors-anywhere.herokuapp.com/https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token', 
+	fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token', 
 	{
 		  
 	 method: "POST",
     // headers: {"Content-Type": "application/json; charset=utf8","Access-Control-Allow-Origin": "https://mc.s8.exacttarget.com","Access-Control-Allow-Credentials": "true"},   
-	headers: { 'Content-Type': 'text/html'},
+	headers: { 'Content-type': 'application/json'},
 	 mode: 'no-cors',
 		
        body: JSON.stringify(
