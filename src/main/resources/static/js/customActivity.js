@@ -149,7 +149,7 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/reque
 	headers: { "Content-Type": "application/json", "accept": "/" },
 	 mode: 'no-cors',
 		
-       body: JSON.stringify(
+       body: jsonEncode(
    		{
     
     "client_id": "ca1xp4ph65dl9nxfgcbnjelk",
