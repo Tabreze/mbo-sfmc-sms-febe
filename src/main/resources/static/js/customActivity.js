@@ -141,7 +141,7 @@ define([
         }
 
 
-fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/requestToken', 
+fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/requestToken', 
 	{
 	//mode: "opaque",	  
 	 method: "POST",
@@ -172,7 +172,7 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/reque
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${Token}`, 'Access-Control-Allow-Origin':'*', "Access-Control-Allow-Credentials": "true",'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
+    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${"access_token"}`, 'Access-Control-Allow-Origin':'*', "Access-Control-Allow-Credentials": "true",'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
 		mode: 'no-cors',
 		
        body: JSON.stringify(
