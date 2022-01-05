@@ -141,9 +141,9 @@ define([
         }
 
 
-fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token', 
+/*fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token', 
 	{
-	//mode: "opaque",	  
+		  
 	 method: "POST",
     // headers: {"Content-Type": "application/json; charset=utf8","Access-Control-Allow-Origin": "https://mc.s8.exacttarget.com","Access-Control-Allow-Credentials": "true"},   
 	headers: { "Content-Type": "text/html",'Access-Control-Allow-Origin': '*' },
@@ -166,13 +166,13 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token
       }
     
      }).catch(err => console.log(err));
-    
+    */
 	
-	/*fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
+	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
 	{
-	//mode: "opaque",	  
+	  
 	 method: "POST",
-    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${"Token"}`, 'Access-Control-Allow-Origin': 'https://mc.s8.exacttarget.com','Access-Control-Allow-Credentials': 'true','Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
+    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': "token", 'Access-Control-Allow-Origin': '*'},   
 		mode: 'no-cors',
 		
        body: JSON.stringify(
@@ -193,7 +193,7 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token
      console.log("this is success")
       }
     
-     }).catch(err => console.log(err));*/
+     }).catch(err => console.log(err));
     
 	console.log("SMS ID: " +JSON.stringify(SMSidValue));
 	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
