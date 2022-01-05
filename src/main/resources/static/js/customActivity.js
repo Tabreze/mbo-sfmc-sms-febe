@@ -145,7 +145,8 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/reque
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-     headers: {"Content-Type": "application/json; charset=utf8","Access-Control-Allow-Origin": "https://mc.s8.exacttarget.com","Access-Control-Allow-Credentials": "true"},   
+    // headers: {"Content-Type": "application/json; charset=utf8","Access-Control-Allow-Origin": "https://mc.s8.exacttarget.com","Access-Control-Allow-Credentials": "true"},   
+	headers : {'Content-Type': 'application/json', 'charset': 'utf-8'},
 	 mode: 'no-cors',
 		
        body: JSON.stringify(
@@ -171,7 +172,7 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/reque
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${"requestToken"}`, 'Access-Control-Allow-Origin': 'https://mc.s8.exacttarget.com','Access-Control-Allow-Credentials': 'true','Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
+    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${"Token"}`, 'Access-Control-Allow-Origin': 'https://mc.s8.exacttarget.com','Access-Control-Allow-Credentials': 'true','Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
 		mode: 'no-cors',
 		
        body: JSON.stringify(
