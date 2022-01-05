@@ -146,15 +146,15 @@ define([
 		  
 	 method: "POST",
     // headers: {"Content-Type": "application/json; charset=utf8","Access-Control-Allow-Origin": "https://mc.s8.exacttarget.com","Access-Control-Allow-Credentials": "true"},   
-	headers: { 'content-type': 'application/x-www-form-urlencoded','Access-Control-Allow-Origin': '*' },
+	headers: { 'Content-Type': 'text/html'},
 	 mode: 'no-cors',
 		
        body: JSON.stringify(
    		{
-    
+    "grant_type": "client_credentials",
     "client_id": "ca1xp4ph65dl9nxfgcbnjelk",
     "client_secret": "5B4zhj2pTWzvjAEqImLPrttU",
-    
+     "account_id": "517005233"
 	})
     
 		}) 
