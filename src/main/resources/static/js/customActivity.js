@@ -76,7 +76,7 @@ define([
         connection.trigger('updateButton', {
             button: 'next',
             text: 'done',
-            visible: false
+            visible: true
        
     })
 }   catch(err) {
