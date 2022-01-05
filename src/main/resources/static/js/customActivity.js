@@ -172,8 +172,9 @@ define([
 	{
 	  
 	 method: "POST",
-    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': "token", 'Access-Control-Allow-Origin': '*'},   
-		mode: 'no-cors',
+    //headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': "token", 'Access-Control-Allow-Origin': '*',"Access-Control-Allow-Credentials": "true"},   
+	headers: { "Content-Type": "text/html",'Authorization': "token","Access-Control-Allow-Origin": '*' },	
+	mode: 'no-cors',
 		
        body: JSON.stringify(
    		{
