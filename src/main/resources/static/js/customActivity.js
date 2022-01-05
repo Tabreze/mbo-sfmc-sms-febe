@@ -141,11 +141,11 @@ define([
         }
 
 
-/*fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/requestToken', 
+fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/requestToken', 
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-     headers: {"Content-type": "application/json, charset=UTF-8","Access-Control-Allow-Credentials": "true",'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
+     headers: {"Content-type": "application/json, charset=UTF-8"},   
 		mode: 'no-cors',
 		
        body: JSON.stringify(
@@ -166,13 +166,12 @@ define([
     
      }).catch(err => console.log(err));
     
-*/
 	
 	fetch('https://mc-260crls51zy9yd64d27td22t8.rest.marketingcloudapis.com/hub/v1/dataeventsasync/key:AFE77857-1B91-49A9-96B6-C201929888D5/rowset', 
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${"authTokens"}`, 'Access-Control-Allow-Origin': 'https://mc.s8.exacttarget.com','Access-Control-Allow-Credentials': 'true','Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
+    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${"requestToken"}`, 'Access-Control-Allow-Origin': 'https://mc.s8.exacttarget.com','Access-Control-Allow-Credentials': 'true','Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
 		mode: 'no-cors',
 		
        body: JSON.stringify(
