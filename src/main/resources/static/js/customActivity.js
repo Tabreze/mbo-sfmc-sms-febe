@@ -71,21 +71,21 @@ define([
 
                })
         });
-
-if( SMSid_Value != "" || TemplateID_Value != "" ){
+alert("You need to Select Both SMS_Id and Template_Id, not just some");
+if( SMSid_Value === "" || TemplateID_Value === ""){
+       // document.getElementbyId(buttonId).disabled = false;
         connection.trigger('updateButton', {
             button: 'next',
             text: 'done',
-        	visible: true
-        });
-    } else{
-         connection.trigger('updateButton', {
-           button: 'next',
-            text: 'done',
             visible: false
 
-    });
-
+        });
+    } else{
+        connection.trigger('updateButton', {
+            button: 'next',
+            text: 'done',
+            visible: true
+        });
     }
 }   catch(err) {
          throw(err);
