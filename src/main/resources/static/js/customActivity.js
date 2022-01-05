@@ -145,7 +145,7 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/reque
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-     headers: {"Content-type": "application/json, charset=UTF-8"},   
+     headers: {"Content-type": "application/json, charset=UTF-8",'Access-Control-Allow-Origin':'*',  "Access-Control-Allow-Credentials": "true", 'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
 		mode: 'no-cors',
 		
        body: JSON.stringify(
