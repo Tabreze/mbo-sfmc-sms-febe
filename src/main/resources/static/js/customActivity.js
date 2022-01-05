@@ -145,8 +145,8 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v1/reque
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-     headers: {"Content-type": "application/json, charset=UTF-8",'Access-Control-Allow-Origin': 'https://mc.s8.exacttarget.com','Access-Control-Allow-Credentials': 'true'},   
-		mode: 'no-cors',
+     headers: {"Content-type": "application/json","Access-Control-Allow-Origin": "https://mc.s8.exacttarget.com","Access-Control-Allow-Credentials": "true"},   
+	 mode: 'no-cors',
 		
        body: JSON.stringify(
    		{
