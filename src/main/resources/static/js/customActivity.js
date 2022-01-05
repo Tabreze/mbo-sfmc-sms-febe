@@ -172,7 +172,7 @@ define([
 	{
 	//mode: "opaque",	  
 	 method: "POST",
-    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${"authTokens"}`, 'Access-Control-Allow-Credentials': 'true','Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
+    headers: {"Content-type": "application/json, charset=UTF-8",'Authorization': `Bearer ${"authTokens"}`, 'Access-Control-Allow-Origin': 'https://mc.s8.exacttarget.com','Access-Control-Allow-Credentials': 'true','Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'},   
 		mode: 'no-cors',
 		
        body: JSON.stringify(
