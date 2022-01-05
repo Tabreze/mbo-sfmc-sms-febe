@@ -141,12 +141,12 @@ define([
         }
 
 
-fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token', 
+	fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token', 
 	{
 		  
 	 method: "POST",
     // headers: {"Content-Type": "application/json; charset=utf8","Access-Control-Allow-Origin": "https://mc.s8.exacttarget.com","Access-Control-Allow-Credentials": "true"},   
-	headers: { "Content-Type": "text/html",'Access-Control-Allow-Origin': '*' },
+	headers: { 'Content-Type': 'text/html','Access-Control-Allow-Origin': '*' },
 	 mode: 'no-cors',
 		
        body: JSON.stringify(
@@ -155,7 +155,7 @@ fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token
     "client_id": "ca1xp4ph65dl9nxfgcbnjelk",
     "client_secret": "5B4zhj2pTWzvjAEqImLPrttU",
     
-})
+	})
     
 		}) 
 	.then(response => response.json()) 
