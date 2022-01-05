@@ -71,22 +71,14 @@ define([
 
                })
         });
-alert("You need to Select Both SMS_Id and Template_Id, not just some");
-if( SMSid_Value === "" || TemplateID_Value === ""){
-       // document.getElementbyId(buttonId).disabled = false;
+
+   
         connection.trigger('updateButton', {
             button: 'next',
             text: 'done',
             visible: false
-
-        });
-    } else{
-        connection.trigger('updateButton', {
-            button: 'next',
-            text: 'done',
-            visible: true
-        });
-    }
+       
+    })
 }   catch(err) {
          throw(err);
        // console.log(err);
@@ -119,7 +111,7 @@ if( SMSid_Value === "" || TemplateID_Value === ""){
 		//console.log("***Calling save function: ");
 		var SMSidValue = $('#SMSid').val();
         var TemplateIDValue = $('#TemplateID').val();
-        //payload['metaData'].isConfigured = true;
+	    //payload['metaData'].isConfigured = true;
 		//payload.name = name;
         payload['arguments'].execute.inArguments = [{
             "SMSid_Value": SMSidValue,
