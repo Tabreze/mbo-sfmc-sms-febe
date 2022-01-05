@@ -78,7 +78,7 @@ define([
             text: 'done',
             visible: true
        
-    })
+    });
 }   catch(err) {
          throw(err);
        // console.log(err);
