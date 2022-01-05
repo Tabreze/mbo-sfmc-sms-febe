@@ -147,7 +147,7 @@ define([
 	 method: "POST",
     // headers: {"Content-Type": "application/json; charset=utf8","Access-Control-Allow-Origin": "https://mc.s8.exacttarget.com","Access-Control-Allow-Credentials": "true"},   
 	headers: { 'Content-type': 'application/json'},
-	 //mode: 'no-cors',
+	 mode: 'no-cors',
 		
        body: JSON.stringify(
    		{
