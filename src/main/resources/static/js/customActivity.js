@@ -113,10 +113,11 @@ define([
         var TemplateIDValue = $('#TemplateID').val();
 
 
-         if( SMSidValue === "S001" || TemplateIDValue === "T001"){
-		alert("Value can not blank");
-		window.stop()
-	}
+         if( SMSidValue === "" || TemplateIDValue === ""){
+			//alert("Select IDs from the Dropdown");
+			swal("Alert!", "Select IDs from the Dropdown");
+			window.stop()
+		}
 	    //payload['metaData'].isConfigured = true;
 		//payload.name = name;
         payload['arguments'].execute.inArguments = [{
