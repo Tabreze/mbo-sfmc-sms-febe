@@ -114,7 +114,7 @@ define([
 
 
          if( SMSidValue === "" || TemplateIDValue === ""){
-			alert("Select IDs from the Dropdown");
+			swal("Select IDs from the Dropdown");
 			//swal("Alert!", "Select IDs from the Dropdown");
             window.stop()
             }
@@ -156,14 +156,14 @@ define([
 	 method: "POST",
     // headers: {"Content-Type": "application/json; charset=utf8","Access-Control-Allow-Origin": "https://mc.s8.exacttarget.com","Access-Control-Allow-Credentials": "true"},   
 	headers: { 'Content-type': 'application/json'},
-	 mode: 'no-cors',
+	mode: 'no-cors',
 		
        body: JSON.stringify(
    		{
     "grant_type": "client_credentials",
     "client_id": "ca1xp4ph65dl9nxfgcbnjelk",
     "client_secret": "5B4zhj2pTWzvjAEqImLPrttU",
-     "account_id": "517005233"
+    "account_id": "517005233"
 	})
     
 		}) 
