@@ -75,7 +75,7 @@ define([
    
         connection.trigger('updateButton', {
             button: 'next',
-            text: 'DONE',
+            text: 'Done',
             visible: true
        
     });
@@ -111,6 +111,12 @@ define([
 		//console.log("***Calling save function: ");
 		var SMSidValue = $('#SMSid').val();
         var TemplateIDValue = $('#TemplateID').val();
+
+
+         if( SMSidValue === "S001" || TemplateIDValue === "T001"){
+		alert("Value can not blank");
+		window.stop()
+	}
 	    //payload['metaData'].isConfigured = true;
 		//payload.name = name;
         payload['arguments'].execute.inArguments = [{
