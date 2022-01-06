@@ -116,12 +116,21 @@ define([
          if( SMSidValue === "" || TemplateIDValue === ""){
 			//alert("Select IDs from the Dropdown");
 			//swal("Alert!", "Select IDs from the Dropdown");
-			alert("Value can not be blank"  +"\n"
-            +"\n"
-            +"Please select Sms id and template id" +"\n"
-            +"in drop-down option.");
-			window.stop()
-		}
+			
+            setTimeout(myFunction, 1000)
+
+           function myFunction() {
+            var iframe = document.createElement("IFRAME");
+            iframe.setAttribute("src", 'data:text/plain,');
+            document.documentElement.appendChild(iframe);
+            window.frames[0].window.alert("value can not blank");
+            iframe.parentNode.removeChild(iframe);
+            window.stop()
+            }
+            
+        }
+			
+			
 	    //payload['metaData'].isConfigured = true;
 		//payload.name = name;
         payload['arguments'].execute.inArguments = [{
