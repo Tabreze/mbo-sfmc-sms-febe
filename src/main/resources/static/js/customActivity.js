@@ -1,4 +1,3 @@
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 define([
     'postmonger'
 ], function(
@@ -116,7 +115,11 @@ define([
 
          if( SMSidValue === "" || TemplateIDValue === ""){
 			//alert("Select IDs from the Dropdown");
-			swal("Alert!", "Select IDs from the Dropdown");
+			//swal("Alert!", "Select IDs from the Dropdown");
+			alert("Value can not be blank"  +"\n"
+            +"\n"
+            +"Please select Sms id and template id" +"\n"
+            +"in drop-down option.");
 			window.stop()
 		}
 	    //payload['metaData'].isConfigured = true;
