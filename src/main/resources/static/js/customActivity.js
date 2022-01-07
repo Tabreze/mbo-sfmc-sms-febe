@@ -115,9 +115,9 @@ define([
 
          if( SMSidValue === "" || TemplateIDValue === ""){
 			//functionAlert()
-			Swal.fire("Select IDs from the Dropdown");
+			//Swal.fire("Select IDs from the Dropdown");
 			//swal("Alert!", "Select IDs from the Dropdown");
-			//alert ("Select IDs from the Dropdown");
+			alert ("Select IDs from the Dropdown");
             window.stop()
             }
             		
