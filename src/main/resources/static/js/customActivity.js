@@ -119,7 +119,7 @@ define([
 			//swal("Alert!", "Select IDs from the Dropdown");
 			alert("Select IDs from the Dropdown");
             //window.stop()
-			await sleep(1000);
+			sleep(1000);
             }
             		
 			
