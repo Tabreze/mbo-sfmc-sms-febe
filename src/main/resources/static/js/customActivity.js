@@ -119,8 +119,10 @@ define([
 			//swal("Alert!", "Select IDs from the Dropdown");
 			//alert("Select IDs from the Dropdown");
 			var element = document.createElement("div");
-    element.appendChild(document.createTextNode('The man who mistook his wife for a hat'));
-    document.getElementById('step1').appendChild(element);
+    			element.appendChild(document.createTextNode('The man who mistook his wife for a hat'));
+    			document.getElementById('step1').appendChild(element);
+				alert("Select IDs from the Dropdown");
+			return;
             //throw "exit"
 			//sleep(1);
             }
