@@ -118,13 +118,15 @@ define([
 			//Swal.fire("Select IDs from the Dropdown");
 			//swal("Alert!", "Select IDs from the Dropdown");
 			//alert("Select IDs from the Dropdown");
-			var element = document.createElement("div");
-    			element.appendChild(document.createTextNode('Select IDs from the Dropdown'));
-    			document.getElementById('step1').appendChild(element);
+			//var element = document.createElement("div");
+    		//	element.appendChild(document.createTextNode('Select IDs from the Dropdown'));
+    		//	document.getElementById('step1').appendChild(element);
 				//alert("Select IDs from the Dropdown");
-				return;
+				
             //throw "exit"
 			//sleep(1);
+			document.getElementById("step2").innerHTML = "Select IDs from the Dropdown";
+			return;
             }
             		
 			
