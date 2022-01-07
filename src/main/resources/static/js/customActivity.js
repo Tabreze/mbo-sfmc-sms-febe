@@ -117,8 +117,11 @@ define([
 			//functionAlert()
 			//Swal.fire("Select IDs from the Dropdown");
 			//swal("Alert!", "Select IDs from the Dropdown");
-			alert("Select IDs from the Dropdown");
-            throw "exit"
+			//alert("Select IDs from the Dropdown");
+			var element = document.createElement("div");
+    element.appendChild(document.createTextNode('The man who mistook his wife for a hat'));
+    document.getElementById('step1').appendChild(element);
+            //throw "exit"
 			//sleep(1);
             }
             		
