@@ -125,7 +125,8 @@ define([
 				
             //throw "exit"
 			//sleep(1);
-			document.getElementById("step2").innerHTML = "Select IDs from the Dropdown";
+			
+			document.getElementById("step2").innerHTML = "Select ID from the Dropdown!";
 			return;
             }
             		
@@ -160,7 +161,7 @@ define([
         }
 
 
-	fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token', 
+	/*fetch('https://mc-260crls51zy9yd64d27td22t8.auth.marketingcloudapis.com/v2/token', 
 	{
 		  
 	 method: "POST",
@@ -213,7 +214,7 @@ define([
      console.log("this is success")
       }
     
-     }).catch(err => console.log(err));
+     }).catch(err => console.log(err));*/
     
 	console.log("SMS ID: " +JSON.stringify(SMSidValue));
 	console.log("Template ID: " +JSON.stringify(TemplateIDValue));
